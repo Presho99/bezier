@@ -21,6 +21,14 @@ function Graph() {
         context.lineTo(50, 50)
         context.lineTo(450, 50)
         context.stroke()
+
+        // Draw data points
+        context.fillStyle = 'blue'
+        dataPoints.forEach(point => {
+            context.beginPath()
+            context.arc(point.x, point.y, 5, 0, 2 * Math.PI)
+            context.fill()
+        })
     }, [])
   return (
     <canvas ref={canvasRef} width="500" height="500" style={{border: '1px solid #000'}}></canvas>
