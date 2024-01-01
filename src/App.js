@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <h1>I'm trying out bezier curves</h1>
       <Graph/>
-      <Bezier/>
+      {/* <Bezier/> */}
     </div>
   );
 }
