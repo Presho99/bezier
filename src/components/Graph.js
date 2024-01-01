@@ -14,9 +14,16 @@ function Graph() {
             {x:350, y:100},
             {x:450, y:250}
         ]
-    })
+
+        // Draw axes
+        context.beginPath()
+        context.moveTo(50, 250)
+        context.lineTo(50, 50)
+        context.lineTo(450, 50)
+        context.stroke()
+    }, [])
   return (
-    <div>Graph</div>
+    <canvas ref={canvasRef} width="500" height="500" style={{border: '1px solid #000'}}></canvas>
   )
 }
 
